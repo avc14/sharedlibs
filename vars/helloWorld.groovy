@@ -1,3 +1,3 @@
 def helloWorld() {
-    sh "echo my name is number"
+    bat "echo my name is number"
 }
