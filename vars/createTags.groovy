@@ -3,6 +3,9 @@ def call(Map args){
   bat "echo ${version}"
 }
 private def createTag(String base) {
+  if ( base.contains(" ") ){
+    error("tag base contains spaces.")
+  }
   def ts = new Date().format("yyyyMMddHHmmss")
   return "${base}.${ts}"
 }
