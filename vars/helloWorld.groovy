@@ -1,5 +1,5 @@
 def call(String name, String env) {
-    check_args($name,$env)
+    check_args("${name}","${env}")
     bat "echo my name is number"
 }
 
