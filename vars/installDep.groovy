@@ -1,7 +1,8 @@
 def call(){
   try {
     bat """
-    call venv\\Scripts\\activate
+    python -m venv venv
+    call venv/Scripts/activate
     pip install -r requirements.txt
     """
   } catch ( Exception e ) {
