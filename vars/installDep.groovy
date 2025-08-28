@@ -5,11 +5,7 @@ def call(Map args = [:]) {
   if (!fileExists(requirements)) {
     error "Requirements file is not present"
   }
-
-  if (!fileExists("venv/Scripts/activate.bat")) {
-    bat "${python} -m venv venv"
-  }
-      
+  
   bat """
   ${python} -m venv venv
   call venv/Scripts/activate
